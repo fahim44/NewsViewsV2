@@ -1,0 +1,2 @@
+include ':app', ':backendlib'
+rootProject.name='NewsViews'
