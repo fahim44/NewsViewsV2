@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">NewsViews</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="skip">Skip</string>
+    <string name="next">Next</string>
+    <string name="get_started">Get Started</string>
+    <string name="tutorial_first_page">Hello, I am Fahim Salam Chowdhury</string>
+    <string name="tutorial_third_page">I am a software engineer</string>
 </resources>
