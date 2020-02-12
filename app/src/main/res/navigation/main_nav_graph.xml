@@ -15,4 +15,11 @@
         android:name="com.fahim.newsviews.ui.splashscreenfragment.SplashScreenFragment"
         tools:layout="@layout/fragment_splash_screen" />
 
+    <!-- Global Actions-->
+    <action
+        android:id="@+id/action_global_splashScreenFragment"
+        app:destination="@id/splashScreenFragment"
+        app:popUpTo="@id/main_nav_graph"
+        app:popUpToInclusive="true" />
+
 </navigation>
