@@ -7,6 +7,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.navigation.fragment.NavHostFragment;
+
 import com.fahim.newsviews.R;
 import com.fahim.newsviews.ui.base.BaseFragment;
 
@@ -22,10 +24,8 @@ public class SplashScreenFragment extends BaseFragment {
     public void onResume() {
         super.onResume();
         new Handler().postDelayed(
-                ()-> {
-                    //TODO: navigate to mainScreen
-                },2000
-        );
+                () -> NavHostFragment.findNavController(this).navigate(
+                        SplashScreenFragmentDirections.actionSplashScreenFragmentToNavigationDrawerFragment()),
+                1000);
     }
-
 }

@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.navigation.fragment.NavHostFragment;
 import androidx.viewpager.widget.ViewPager;
 
 import com.fahim.newsviews.R;
@@ -51,7 +52,7 @@ public class TutorialFragment extends BaseFragment {
             @Override
             public void onPageSelected(int position) {
                 if (viewPager.getAdapter() != null) {
-                    Timber.d("TutorialFragment--> pagerSelectedPosition "+ position);
+                    Timber.d("TutorialFragment--> pagerSelectedPosition %s", position);
                     if (position == viewPager.getAdapter().getCount() - 1) {
                         bottomButtonsLayout.setVisibility(View.GONE);
                         getStartedTextView.setVisibility(View.VISIBLE);
@@ -84,7 +85,8 @@ public class TutorialFragment extends BaseFragment {
 
     @OnClick(R.id.getStartedTextView)
     void getStartedButtonClicked() {
-        //TODO: navigate to mainScreen
+        NavHostFragment.findNavController(this).navigate(
+                TutorialFragmentDirections.actionTutorialFragmentToNavigationDrawerFragment());
     }
 
 }
