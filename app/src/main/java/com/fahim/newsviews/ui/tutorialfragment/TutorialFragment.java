@@ -84,6 +84,7 @@ public class TutorialFragment extends BaseFragment {
 
     @OnClick(R.id.getStartedTextView)
     void getStartedButtonClicked() {
+        //TODO: navigate to mainScreen
     }
 
 }
